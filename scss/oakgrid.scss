@@ -37,7 +37,7 @@ $grid-padding: 30px;
         padding: 0;
     }
 
-    @include respond-to-min($sm) {
+    @media (min-width: $sm) {
         gap: $grid-gap;        
     }
 
@@ -65,7 +65,7 @@ $grid-padding: 30px;
     @each $size in $sizes {
         @for $i from 1 through 12 {
             .col-#{nth($size,1)}-#{$i} {
-                @include respond-to-min(#{nth($size,2)}) {
+                @media (min-width: #{nth($size,2)}) {
                     grid-column-end: span #{$i};
                 } 
             }
@@ -85,7 +85,7 @@ $grid-padding: 30px;
     @each $size in $sizes {
         @for $i from 1 through 12 {
             .offset-#{nth($size,1)}-#{$i} {
-                @include respond-to-min(#{nth($size,2)}) {
+                @media (min-width: #{nth($size,2)}) {
                     grid-column-start: #{$i + 1};
                 } 
             }
