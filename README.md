@@ -25,7 +25,7 @@ To create a grid, you only need to create a `.grid` wrapper, with `col-*` childr
 The number following `.col-` represents the amount of columns the given element should span.
 
 **Minimum Markup Example:**
-```
+```html
 <div class="grid">
     <div class="col-4">
         Content goes here
@@ -47,7 +47,7 @@ Rows can be added to the grid to ensure that content is vertically seperated.
 
 **Example of markup WITHOUT a `.row` element**
 
-```
+```html
 <div class="grid">
     <div class="col-6">
         This is 6 columns
@@ -58,13 +58,14 @@ Rows can be added to the grid to ensure that content is vertically seperated.
 </div>
 ```
 
-// TODO: IMAGEHERE
+`EXAMPLE IMAGE COMING`
+
 As you can see in the above example, the grid behaves as expected. But what if we don't want the 2 columns in the same row, but still want to contain the 6 column width.
 
 That is where `.row` comes into play
 
 **Example of markup WITH a `.row` element**
-```
+```html
 <div class="grid">
     <div class="row">
         <div class="col-6">
@@ -77,7 +78,7 @@ That is where `.row` comes into play
 </div>
 ```
 
-// TODO: IMAGEHERE
+`EXAMPLE IMAGE COMING`
 
 By adding row elements, we ensure that the elements are seperated vertically.
 
@@ -85,7 +86,7 @@ By adding row elements, we ensure that the elements are seperated vertically.
 It it possible to offset columns, in case you need something aligned differently.
 
 **Example of offset**
-```
+```html
 <div class="grid">
     <div class="row">
         <div class="col-6">
