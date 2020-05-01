@@ -17,7 +17,7 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 30px;
-    padding: 0 30px;
+    padding: 30px;
     margin: 0 auto;
 }
 .grid--fluid, .row--fluid {

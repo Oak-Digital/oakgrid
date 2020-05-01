@@ -23,7 +23,7 @@ $grid-padding: 30px;
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
 	gap: $grid-gap--mobile;
-    padding: 0 $grid-padding;
+    padding: $grid-padding;
     margin: 0 auto;
 
     &--fluid {
