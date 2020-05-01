@@ -2,11 +2,23 @@
 # OAKGrid
 Simple Lightweight CSS Grid Template
 
-### Naming conventions based on Bootstrap
+## DEMO
+[https://codepen.io/plenge/pen/zYvExRY](https://codepen.io/plenge/pen/zYvExRY)
+
+## Table of contents
+- [Naming Convention](#Naming-conventions-based-on-Bootstrap)
+- [Example of grid markup](#Example-of-grid-markup)
+- [How to use rows](#The-use-of-`.row`)
+- [How to offset columns](#Offset)
+- [Making it responsive](#Making-it-responsive)
+
+___
+
+## Naming conventions based on Bootstrap
 
 For the sake of easy transition for anyone already familiar with Bootstrap, the class naming convention is almost identical to Bootstrap 4.
 
-### Example of grid markup
+## Example of grid markup
 
 To create a grid, you only need to create a `.grid` wrapper, with `col-*` childrens. 
 
@@ -27,9 +39,11 @@ The number following `.col-` represents the amount of columns the given element 
 </div>
 ```
 
-## The use of `.row`, and why it is optional
+## The use of `.row`
 
 Rows can be added to the grid to ensure that content is vertically seperated.
+
+*Rows are completely optional in the markup*
 
 **Example of markup WITHOUT a `.row` element**
 
