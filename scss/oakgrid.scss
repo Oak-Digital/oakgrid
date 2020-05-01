@@ -1,0 +1,95 @@
+/*!
+   ___    _    _  ______      _     _ 
+  / _ \  / \  | |/ / ___|_ __(_) __| |
+ | | | |/ _ \ | ' / |  _| '__| |/ _` |
+ | |_| / ___ \| . \ |_| | |  | | (_| |
+  \___/_/   \_\_|\_\____|_|  |_|\__,_|
+       
+ Version: 1.0.1
+  Author: Jakob Plenge, jakob.plenge@oakdigital.dk
+ Website: https://www.oakdigital.dk
+    Docs: https://github.com/Oak-Digital/oakgrid
+    Repo: https://github.com/Oak-Digital/oakgrid
+  Issues: https://github.com/Oak-Digital/oakgrid/issues
+
+*/
+
+/*--------------------------------------------------------------
+# Defining sizes
+--------------------------------------------------------------*/
+
+$sizes: ('sm' '576px'), ('md' '768px'), ('lg' '992px'), ('xl' '1200px');
+$grid-gap: 30px;
+$grid-gap--mobile: 30px;
+$grid-padding: 30px;
+
+/*--------------------------------------------------------------
+# Grid containers
+--------------------------------------------------------------*/
+
+.grid, .row {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	gap: $grid-gap--mobile;
+    padding: 0 $grid-padding;
+
+    &--fluid {
+        padding: 0;
+    }
+
+    @include respond-to-min($sm) {
+        gap: $grid-gap;        
+    }
+
+    [class*='col'], [class*='row'] {
+        grid-column-end: span 12;
+    }
+}
+
+.row {
+	padding: 0;
+}
+
+.grid {
+    
+    /*--------------------------------------------------------------
+    # Base Column Styling
+    --------------------------------------------------------------*/
+
+    @for $i from 1 through 12 {
+        .col-#{$i} {
+            grid-column-end: span #{$i};
+        }
+    }
+
+    @each $size in $sizes {
+        @for $i from 1 through 12 {
+            .col-#{nth($size,1)}-#{$i} {
+                @include respond-to-min(#{nth($size,2)}) {
+                    grid-column-end: span #{$i};
+                } 
+            }
+        }
+    }
+
+    /*--------------------------------------------------------------
+    # Offset Styling
+    --------------------------------------------------------------*/
+
+    @for $x from 1 through 12 {
+        .offset-#{$x} {
+            grid-column-start: #{$x + 1};
+        }
+    }
+
+    @each $size in $sizes {
+        @for $i from 1 through 12 {
+            .offset-#{nth($size,1)}-#{$i} {
+                @include respond-to-min(#{nth($size,2)}) {
+                    grid-column-start: #{$i + 1};
+                } 
+            }
+        }
+    }
+
+} // '.grid' end
