@@ -1,6 +1,6 @@
 
 ## OAKGrid
-Simple Lightweight CSS Grid Template
+Simple Lightweight CSS Grid Template - **(Only 7.77 KB minified)**
 
 ### DEMO
 [https://codepen.io/plenge/pen/zYvExRY](https://codepen.io/plenge/pen/zYvExRY)
