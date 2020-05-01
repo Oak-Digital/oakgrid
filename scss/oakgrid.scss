@@ -32,12 +32,13 @@ $grid-padding: 30px;
 	grid-template-columns: repeat(12, 1fr);
 	gap: $grid-gap--mobile;
     padding: 0 $grid-padding;
+    margin: 0 auto;
 
     &--fluid {
         padding: 0;
     }
 
-    @media (min-width: $sm) {
+    @media (min-width: 576px) {
         gap: $grid-gap;        
     }
 
